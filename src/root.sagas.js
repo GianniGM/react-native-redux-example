@@ -7,6 +7,10 @@ export default function* rootSaga() {
     yield [
         fork(watchIncrementAsync)
 
-        /*insert other sagas here*/
+        /*insert other sagas here with fork function
+        *
+        * fork(myNewWonderfulSagaName)
+        *
+        * */
     ]
 }
