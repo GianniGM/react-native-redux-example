@@ -7,7 +7,7 @@ import {createLogger} from 'redux-logger';
 
 import MainPage from './src/mainPage/screens/mainPage.screen';
 import * as reducers from './src/root.reducers';
-import counterSaga from './src/mainPage/mainPage.sagas';
+import rootSaga from './src/root.sagas';
 
 // The middlewares which will be used in this App
 const middlewares = [];
@@ -29,7 +29,7 @@ const store = createStore(
     applyMiddleware(...middlewares)
 );
 
-sagaMiddleware.run(counterSaga);
+sagaMiddleware.run(rootSaga);
 
 
 export default class reactNativeReduxSagaExample extends Component {
