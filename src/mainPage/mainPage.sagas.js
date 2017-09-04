@@ -1,5 +1,5 @@
 import { delay } from 'redux-saga'
-import { call, put, takeEvery } from 'redux-saga/effects'
+import { call, put, takeEvery, takeLatest } from 'redux-saga/effects'
 
 export function* helloSaga() {
     console.log('Hello Saga!')
@@ -12,6 +12,11 @@ export function* incrementAsync() {
 }
 
 //everyTime I invoce increment action
-export function* watchIncrementAsync() {
-    yield takeEvery('INCREMENT_ASYNC', incrementAsync)
+export function* watchIncrementAsync(isEvery) {
+    if(isEvery)
+        yield takeEvery('INCREMENT_ASYNC', incrementAsync);
+    else
+        yield takeLatest('INCREMENT_ASYNC', incrementAsync);
 }
+
+

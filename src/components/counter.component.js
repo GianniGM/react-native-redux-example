@@ -28,10 +28,13 @@ export default class Counter extends Component {
                     style={styles.button}
                     onPress={decrement}/>
                 <Button
-                    title="increment Async"
+                    title="increment Async TakeEvery"
                     style={styles.button}
                     onPress={incrementAsync}/>
-
+                <Button
+                    title="increment Async TakeLatest"
+                    style={styles.button}
+                    onPress={incrementAsync}/>
             </View>
         );
     }
