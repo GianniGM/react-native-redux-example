@@ -12,11 +12,11 @@ export function* incrementAsync() {
 }
 
 //everyTime I invoce increment action
-export function* watchIncrementAsync(isEvery) {
-    if(isEvery)
-        yield takeEvery('INCREMENT_ASYNC', incrementAsync);
-    else
-        yield takeLatest('INCREMENT_ASYNC', incrementAsync);
+export function* watchIncrementAsync() {
+    yield takeEvery('INCREMENT_ASYNC', incrementAsync);
 }
 
+export function* watchIncrementAsyncLatest(){
+    yield takeLatest('INCREMENT_ASYNC_LATEST', incrementAsync);
+}
 

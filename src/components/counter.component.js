@@ -9,7 +9,7 @@ import {
 export default class Counter extends Component {
 
     render() {
-        const {value, increment, decrement, incrementAsync} = this.props;
+        const {value, increment, decrement, incrementAsync, incrementAsyncLatest} = this.props;
 
         return (
             <View style={styles.container}>
@@ -28,13 +28,13 @@ export default class Counter extends Component {
                     style={styles.button}
                     onPress={decrement}/>
                 <Button
-                    title="increment Async TakeEvery"
+                    title="increment Async Take-Every"
                     style={styles.button}
                     onPress={incrementAsync}/>
                 <Button
-                    title="increment Async TakeLatest"
+                    title="increment Async Take-Latest"
                     style={styles.button}
-                    onPress={incrementAsync}/>
+                    onPress={incrementAsyncLatest}/>
             </View>
         );
     }

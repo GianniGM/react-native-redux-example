@@ -20,7 +20,8 @@ class MainPage extends Component {
                 value={state.value}
                 increment={() => actions.increment()}
                 decrement={() => actions.decrement()}
-                incrementAsync={() => actions.incrementAsync()}
+                incrementAsync={() => actions.incrementAsync(false)}
+                incrementAsyncLatest={() => actions.incrementAsync(true)}
             />
         );
     }
